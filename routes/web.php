@@ -23,3 +23,9 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 });
 
 $router->get('member/{id}/bookings', ['uses' => 'App\Http\Controllers\MemberController@showMemberBookings']);
+
+$router->post('members', ['uses' => 'MemberController@create']);
+
+$router->put('members/{id}', ['uses' => 'MemberController@update']);
+
+$router->delete('members/{id}', ['uses' => 'MemberController@delete']);
